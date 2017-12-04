@@ -1,22 +1,24 @@
-dot-files
+dotfiles
 ========
 
-### Install
+Personalised dotfiles.
+tmux config powered by [@gtramontina](https://github.com/gtramontina) :+1:
+
+### Options
 
 ```
-$ make install
-```
+make install
 
-![alt vim-screenshot](./vim/screenshot.jpeg)
+make install_vim
+make install_tmux
+make install_zshell
 
-### Uninstall
-
-```
-$ make uninstall
+make uninstall
+make uninstall_vim
+make uninstall_tmux
+make uninstall_zshell
 ```
 
 #### TODO: migrate setup files from my_mac_os_apps repo
 
-1. https://github.com/alabeduarte/mypodcasts-api
-2. https://github.com/alabeduarte/vim-files
-3. https://github.com/alabeduarte/tmux-config
+https://github.com/alabeduarte/mypodcasts-api

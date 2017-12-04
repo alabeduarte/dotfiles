@@ -1,13 +1,24 @@
-install: install_vim install_zshell
+install: install_vim install_tmux install_zshell
 
-uninstall:
-	@sh ./vim/uninstall.sh
-	@sh ./zshell/uninstall.sh
+uninstall: uninstall_vim uninstall_tmux uninstall_zshell
 
 install_vim:
 	@sh ./vim/install.sh
 
+uninstall_vim:
+	@sh ./vim/uninstall.sh
+
+install_tmux:
+	@sh ./tmux/install.sh
+
+uninstall_tmux:
+	@sh ./tmux/uninstall.sh
+
 install_zshell:
 	@sh ./zshell/install.sh
 
-.PHONY: install, uninstall, install_vim, install_zshell
+uninstall_zshell:
+	@sh ./zshell/uninstall.sh
+
+.PHONY: install, install_vim, install_tmux, install_zshell, uninstall, \
+	uninstall_vim, uninstall_tmux, uninstall_zshell
