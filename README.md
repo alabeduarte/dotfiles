@@ -7,6 +7,8 @@ dot-files
 $ make install
 ```
 
+![alt vim-screenshot](./vim/screenshot.jpeg)
+
 ### Uninstall
 
 ```

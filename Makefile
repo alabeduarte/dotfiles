@@ -1,10 +1,13 @@
-install:
-	@curl -L http://install.ohmyz.sh | sh
-	@rm ~/.zshrc
-	@ln -s `pwd`/.zshrc ~/.zshrc
+install: install_vim install_zshell
 
 uninstall:
-	@unlink ~/.zshrc
-	@rm -rf ~/.oh-my-zsh
+	@sh ./vim/uninstall.sh
+	@sh ./zshell/uninstall.sh
 
-.PHONY: install, uninstall
+install_vim:
+	@sh ./vim/install.sh
+
+install_zshell:
+	@sh ./zshell/install.sh
+
+.PHONY: install, uninstall, install_vim, install_zshell
