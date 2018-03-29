@@ -21,4 +21,4 @@ make uninstall_zshell
 
 #### TODO: migrate setup files from my_mac_os_apps repo
 
-https://github.com/alabeduarte/mypodcasts-api
+https://github.com/alabeduarte/my_mac_os_apps
