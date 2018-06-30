@@ -4,11 +4,12 @@ dotfiles
 Personalised dotfiles.
 tmux config powered by [@gtramontina](https://github.com/gtramontina) :+1:
 
-### Dependencies (they'll be automatically installed if you just run `make
-install`)
-
+### Dependencies
 * homebrew
 * silversearch
+
+PS: they'll be automatically installed if you just run `make
+install`
 
 ### Options
 
