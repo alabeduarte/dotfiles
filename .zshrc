@@ -38,3 +38,5 @@ alias v="vim"
 alias l='exa -l'
 alias make='gmake'
 alias chrome-dev='open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir=$HOME/profile-folder-name'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
