@@ -24,7 +24,3 @@ make uninstall_vim
 make uninstall_tmux
 make uninstall_zshell
 ```
-
-#### TODO: migrate setup files from my_mac_os_apps repo
-
-https://github.com/alabeduarte/my_mac_os_apps
