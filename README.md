@@ -6,10 +6,9 @@ tmux config powered by [@gtramontina](https://github.com/gtramontina) :+1:
 
 ### Dependencies
 * homebrew
-* silversearch
 
-PS: they'll be automatically installed if you just run `make
-install`
+PS: they'll be automatically installed if you just run `make install`, including
+homebrew.
 
 ### Options
 

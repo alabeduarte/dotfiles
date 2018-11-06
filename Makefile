@@ -4,6 +4,7 @@ uninstall: uninstall_vim uninstall_tmux uninstall_zshell
 
 install_brew:
 	@ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew bundle --file=brew/Brewfile
 
 install_vim:
 	@sh ./vim/install.sh
