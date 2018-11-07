@@ -2,7 +2,8 @@ dotfiles
 ========
 
 Personalised dotfiles.
-tmux config powered by [@gtramontina](https://github.com/gtramontina) :+1:
+
+`.tmux.conf` powered by [@gtramontina](https://github.com/gtramontina) :+1:
 
 ### Dependencies
 * homebrew
