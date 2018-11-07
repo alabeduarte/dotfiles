@@ -5,23 +5,25 @@ Personalised dotfiles.
 
 `.tmux.conf` powered by [@gtramontina](https://github.com/gtramontina) :+1:
 
-### Dependencies
-* homebrew
+### Setup
 
-PS: they'll be automatically installed if you just run `make install`, including
-homebrew.
+Running `make install` command will download `homebrew` to further install `vim`, `tmux` and `zshell` configurations.
 
-### Options
+The configurations are installed based on symbolic links. Whenever you clone this repo and install it, the configuration files will me mapped into your home, but the real source will remain on the directoy you cloned it. The reason behind it is that any change on these configs can be further versioned on git without messing around with your home directory.
 
 ```
-make install
+$ make install
+```
 
-make install_vim
-make install_tmux
-make install_zshell
+### Other options
 
-make uninstall
-make uninstall_vim
-make uninstall_tmux
-make uninstall_zshell
+```
+make install_vim      # install vim with custom plugins
+make install_tmux     # install tmux with custom plugins
+make install_zshell   # install zshell
+
+make uninstall        # uninstall everything, except homebrew
+make uninstall_vim    # unlink and remove .vimrc and plugins
+make uninstall_tmux   # unlink and remove tmux plugins
+make uninstall_zshell # unlink .zshrc and remove zshell
 ```
