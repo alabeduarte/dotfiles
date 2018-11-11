@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vim +PluginInstall +qall
+vim +PluginInstall! +qall
