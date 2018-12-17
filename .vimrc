@@ -124,6 +124,9 @@ Plugin 'tpope/vim-rails'
 " Vim configuration files for Elixir
 Plugin 'elixir-lang/vim-elixir'
 
+" Vim integration for the Elixir formatter.
+Plugin 'mhinz/vim-mix-format'
+
 " Yet Another JavaScript Syntax for Vim
 Plugin 'othree/yajs.vim'
 
@@ -230,3 +233,8 @@ let g:DevIconsEnableFoldersOpenClose = 1
 let g:webdevicons_conceal_nerdtree_brackets = 0
 let NERDTreeMinimalUI = 1
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" -----------------------------------------------------------------------------
+" Code format
+" -----------------------------------------------------------------------------
+let g:mix_format_on_save = 1
