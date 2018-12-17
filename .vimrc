@@ -124,8 +124,11 @@ Plugin 'tpope/vim-rails'
 " Vim configuration files for Elixir
 Plugin 'elixir-lang/vim-elixir'
 
-" Vim integration for the Elixir formatter.
+" Vim integration for the Elixir formatter
 Plugin 'mhinz/vim-mix-format'
+
+" Vim plugin for using Elixir's build tool, mix
+Plugin 'mattreduce/vim-mix'
 
 " Yet Another JavaScript Syntax for Vim
 Plugin 'othree/yajs.vim'
