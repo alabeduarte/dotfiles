@@ -1,40 +1,40 @@
-install: install_brew install_vim install_tmux install_zshell install_git_config
+install: install.brew install.vim install.tmux install.zshell install.git_config
 
-uninstall: uninstall_vim uninstall_tmux uninstall_zshell
+uninstall: uninstall.vim uninstall.tmux uninstall.zshell
 
-install_brew:
+install.brew:
 	@ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew bundle --file=brew/Brewfile
 
-install_vim:
+install.vim:
 	@sh ./vim/install.sh
 	@brew install the_silver_searcher
 
-install_tmux:
+install.tmux:
 	@sh ./tmux/install.sh
 
-install_zshell:
+install.zshell:
 	@sh ./zshell/install.sh
 
-install_git_config:
+install.git_config:
 	@sh ./git-config/install.sh
 
-uninstall_vim:
+uninstall.vim:
 	@sh ./vim/uninstall.sh
 
-uninstall_tmux:
+uninstall.tmux:
 	@sh ./tmux/uninstall.sh
 
-uninstall_zshell:
+uninstall.zshell:
 	@sh ./zshell/uninstall.sh
 
 .PHONY: install, \
-	install_brew, \
-	install_vim, \
-	install_tmux, \
-	install_zshell, \
-	install_git_config,	\
+	install.brew, \
+	install.vim, \
+	install.tmux, \
+	install.zshell, \
+	install.git_config,	\
 	uninstall, \
-	uninstall_vim, \
-	uninstall_tmux, \
-	uninstall_zshell
+	uninstall.vim, \
+	uninstall.tmux, \
+	uninstall.zshell

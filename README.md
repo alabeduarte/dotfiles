@@ -18,12 +18,13 @@ $ make install
 ### Other options
 
 ```
-make install_vim      # install vim with custom plugins
-make install_tmux     # install tmux with custom plugins
-make install_zshell   # install zshell
+make install.brew     # install homebrew
+make install.vim      # install vim with custom plugins
+make install.tmux     # install tmux with custom plugins
+make install.zshell   # install zshell
 
 make uninstall        # uninstall everything, except homebrew
-make uninstall_vim    # unlink and remove .vimrc and plugins
-make uninstall_tmux   # unlink and remove tmux plugins
-make uninstall_zshell # unlink .zshrc and remove zshell
+make uninstall.vim    # unlink and remove .vimrc and plugins
+make uninstall.tmux   # unlink and remove tmux plugins
+make uninstall.zshell # unlink .zshrc and remove zshell
 ```
