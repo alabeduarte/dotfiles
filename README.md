@@ -15,6 +15,12 @@ The configurations are installed based on symbolic links. Whenever you clone thi
 $ make install
 ```
 
+#### iterm2
+
+As part of the installation, a new file will be generated at the root of this
+repository called `<YOUR_USERNAME>-iterm2-config.plist`, so you can use this file to
+configure your iterm2 or just ignore it.
+
 ### Other options
 
 ```
@@ -22,6 +28,7 @@ make install.brew     # install homebrew
 make install.vim      # install vim with custom plugins
 make install.tmux     # install tmux with custom plugins
 make install.zshell   # install zshell
+make configure.iterm2 # configure iterm2
 
 make uninstall        # uninstall everything, except homebrew
 make uninstall.vim    # unlink and remove .vimrc and plugins

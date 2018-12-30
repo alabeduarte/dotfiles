@@ -1,4 +1,4 @@
-install: install.brew install.vim install.tmux install.zshell install.git_config
+install: install.brew install.vim install.tmux install.zshell install.git_config configure.iterm2
 
 uninstall: uninstall.vim uninstall.tmux uninstall.zshell
 
@@ -19,6 +19,9 @@ install.zshell:
 install.git_config:
 	@sh ./git-config/install.sh
 
+configure.iterm2:
+	@sh ./iterm2/set_user_path.sh
+
 uninstall.vim:
 	@sh ./vim/uninstall.sh
 
@@ -34,6 +37,7 @@ uninstall.zshell:
 	install.tmux, \
 	install.zshell, \
 	install.git_config,	\
+	configure.iterm2,	\
 	uninstall, \
 	uninstall.vim, \
 	uninstall.tmux, \
