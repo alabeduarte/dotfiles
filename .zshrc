@@ -18,7 +18,10 @@ POWERLEVEL9K_VCS_COMMIT_ICON='\uE729 '
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-plugins=(git jump)
+plugins=(git jump zsh-completions)
+
+# zsh-completions: reloading the completion
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
