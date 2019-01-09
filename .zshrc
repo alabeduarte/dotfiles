@@ -21,7 +21,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git jump zsh-completions)
 
 # zsh-completions: reloading the completion
-autoload -U compinit && compinit
+fpath=($ZSH/custom/plugins/zsh-completions/src $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
