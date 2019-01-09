@@ -16,15 +16,15 @@ let NERDTreeShowHidden=1
 map <leader>vp :VimuxPromptCommand<CR>
 
 " Run current rspecs
-map <Leader>rs :call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
+map <leader>rs :call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
 " Run rspecs
-map <Leader>rb :call VimuxRunCommand("clear; bundle exec rspec ")<CR>
+map <leader>rb :call VimuxRunCommand("clear; bundle exec rspec ")<CR>
 
 " Run all npm tests
-map <Leader>nt :call VimuxRunCommand("clear; npm test ")<CR>
+map <leader>nt :call VimuxRunCommand("clear; npm test ")<CR>
 
 " Run last command
-map <Leader>rl :VimuxRunLastCommand<CR>"
+map <leader>rl :VimuxRunLastCommand<CR>"
 
 " -----------------------------------------------------------------------------
 " Common editor configs
@@ -127,8 +127,8 @@ Plugin 'elixir-lang/vim-elixir'
 " Vim integration for the Elixir formatter
 Plugin 'mhinz/vim-mix-format'
 
-" Vim plugin for using Elixir's build tool, mix
-Plugin 'mattreduce/vim-mix'
+" Elixir Integration Into Vim
+Plugin 'slashmili/alchemist.vim'
 
 " Yet Another JavaScript Syntax for Vim
 Plugin 'othree/yajs.vim'
@@ -238,6 +238,6 @@ let NERDTreeMinimalUI = 1
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " -----------------------------------------------------------------------------
-" Code format
+" Elixir code format
 " -----------------------------------------------------------------------------
 let g:mix_format_on_save = 1
