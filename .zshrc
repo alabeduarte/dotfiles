@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -26,11 +28,11 @@ fpath=($ZSH/custom/plugins/zsh-completions/src $fpath)
 source $ZSH/oh-my-zsh.sh
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-export TERM=xterm-256color
 export PATH="$HOME/.jenv/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 if [ -r .nvmrc ]; then
   version=`cat .nvmrc`
   echo "[ Using Node v$version ]"
