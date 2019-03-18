@@ -235,7 +235,6 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:webdevicons_conceal_nerdtree_brackets = 0
 let NERDTreeMinimalUI = 1
-let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " -----------------------------------------------------------------------------
 " Elixir code format
