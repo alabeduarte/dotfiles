@@ -200,6 +200,7 @@ try
   syntax enable
   set background=dark
   colorscheme solarized
+  hi Normal guibg=NONE ctermbg=NONE
 catch
 endtry
 
