@@ -136,6 +136,9 @@ Plugin 'othree/yajs.vim'
 " Vastly improved Javascript indentation and syntax support in Vim.
 Plugin 'pangloss/vim-javascript'
 
+" TypeScript support for vim
+Plugin 'leafgarland/typescript-vim'
+
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
 
