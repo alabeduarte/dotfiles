@@ -131,7 +131,11 @@ set rtp+=/usr/local/opt/fzf
 
 " junegunn/fzf
 " Enable CTRL-P
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-p> :Files<CR>
+
+" rking/ag
+" Content search
+nnoremap \ :Ag<SPACE>
 
 " -----------------------------------------------------------------------------
 " Key binding
