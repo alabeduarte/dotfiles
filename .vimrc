@@ -19,7 +19,8 @@ Plug 'benmills/vimux'
 Plug 'airblade/vim-gitgutter'
 
 " Fuzzy file, buffer, mru, tag, etc finder
-Plug 'kien/ctrlp.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Vim plugin for the_silver_searcher, 'ag'
 Plug 'rking/ag.vim'
@@ -124,15 +125,13 @@ au BufRead,BufNewFile *.jbuilder setfiletype ruby
 " Enable JSX syntax highlighting and indenting for .js files
 let g:jsx_ext_required = 0
 
-" -----------------------------------------------------------------------------
-" Fuzzy Search
-" -----------------------------------------------------------------------------
-let g:ctrlp_show_hidden=1
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" junegunn/fzf
+" Enable fzf in vim
+set rtp+=/usr/local/opt/fzf
 
-set nocompatible
-filetype off
+" junegunn/fzf
+" Enable CTRL-P
+nnoremap <C-p> :Files<Cr>
 
 " -----------------------------------------------------------------------------
 " Key binding
