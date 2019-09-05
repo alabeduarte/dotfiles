@@ -39,7 +39,7 @@ if [ -r .nvmrc ]; then
   nvm use $version
 fi
 
-alias v="vim"
+alias v="nvim"
 alias l='exa -l'
 alias make='gmake'
 alias chrome-dev='open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir=$HOME/profile-folder-name'
