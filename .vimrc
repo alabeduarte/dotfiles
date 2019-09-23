@@ -80,11 +80,11 @@ Plug 'slashmili/alchemist.vim'
 " Vastly improved Javascript indentation and syntax support in Vim.
 Plug 'pangloss/vim-javascript'
 
-" Prettier for javascript
-Plug 'prettier/vim-prettier'
-
 " TypeScript support for vim
 Plug 'leafgarland/typescript-vim'
+
+" Auto-format Javascript with ESLint
+Plug 'w0rp/ale'
 
 " React JSX syntax highlighting and indenting for vim.
 Plug 'mxw/vim-jsx'
@@ -235,8 +235,6 @@ let g:mix_format_on_save = 1
 " -----------------------------------------------------------------------------
 " Javascript code format
 " -----------------------------------------------------------------------------
-let g:prettier#exec_cmd_async = 1
-let g:prettier#config#bracket_spacing = 'true'
-" 'autoformat' only means for only files with '@format' tag.
-let g:prettier#autoformat = 0
-let g:prettier#exec_cmd_path = ""
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['eslint']
+let g:ale_fix_on_save = 1
