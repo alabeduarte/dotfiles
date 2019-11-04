@@ -162,6 +162,9 @@ map <leader>nt :call VimuxRunCommand("clear; npm test ")<CR>
 " Run last command
 map <leader>rl :VimuxRunLastCommand<CR>"
 
+" Go to definition
+map <leader>g :ALEGoToDefinition<CR>
+
 " -----------------------------------------------------------------------------
 " Common editor configs
 " -----------------------------------------------------------------------------
