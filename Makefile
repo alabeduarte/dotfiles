@@ -3,9 +3,7 @@ install: install.brew install.vim install.tmux install.zshell install.git_config
 uninstall: uninstall.vim uninstall.tmux uninstall.zshell
 
 install.brew:
-	@ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	@brew bundle --file=brew/Brewfile
-	@sh ./brew/fzf-key-bindings.install.sh
+	@sh ./brew/install.sh
 
 install.vim:
 	@sh ./vim/install.sh
