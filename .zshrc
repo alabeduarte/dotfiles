@@ -39,6 +39,12 @@ if [ -r .nvmrc ]; then
   nvm use $version
 fi
 
+# Go
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 alias v="nvim"
 alias l='exa -l'
 alias make='gmake'
