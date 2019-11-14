@@ -77,17 +77,17 @@ Plug 'mhinz/vim-mix-format'
 " Elixir Integration Into Vim
 Plug 'slashmili/alchemist.vim'
 
-" Vastly improved Javascript indentation and syntax support in Vim.
-Plug 'pangloss/vim-javascript'
-
-" TypeScript support for vim
-Plug 'leafgarland/typescript-vim'
-
 " Auto-format Javascript with ESLint
 Plug 'w0rp/ale'
 
+" Vastly improved Javascript indentation and syntax support in Vim.
+Plug 'yuezk/vim-js'
+
 " React JSX syntax highlighting and indenting for vim.
-Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
+
+" TypeScript support for vim
+Plug 'HerringtonDarkholme/yats.vim'
 
 " Provides support for expanding abbreviations
 Plug 'mattn/emmet-vim'
@@ -121,9 +121,9 @@ syntax on
 " Enable Ruby syntax highlighting and indenting for .jbuilder files
 au BufRead,BufNewFile *.jbuilder setfiletype ruby
 
-" mxw/vim-jsx
-" Enable JSX syntax highlighting and indenting for .js files
-let g:jsx_ext_required = 0
+" MaxMEllon/vim-jsx-pretty
+" Colorful style (vim-javascript only)
+let g:vim_jsx_pretty_colorful_config = 1
 
 " junegunn/fzf
 " Enable fzf in vim
