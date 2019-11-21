@@ -238,7 +238,11 @@ let g:mix_format_on_save = 1
 " -----------------------------------------------------------------------------
 " Javascript code format
 " -----------------------------------------------------------------------------
-let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'typescript': ['prettier', 'eslint']}
+let g:ale_fixers = {
+      \'javascript': ['prettier', 'eslint'],
+      \'javascriptreact': ['prettier', 'eslint'],
+      \'typescript': ['prettier', 'eslint']
+      \}
 let g:ale_fix_on_save = 1
 
 " Enable completion where available.
