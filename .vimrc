@@ -250,6 +250,6 @@ let g:ale_fix_on_save = 1
 "
 " You should not turn this setting on if you wish to use ALE as a completion
 " source for other completion plugins, like Deoplete.
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_completion_tsserver_autoimport = 1
 set omnifunc=ale#completion#OmniFunc
