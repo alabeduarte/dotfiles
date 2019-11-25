@@ -241,7 +241,8 @@ let g:mix_format_on_save = 1
 let g:ale_fixers = {
       \'javascript': ['prettier', 'eslint'],
       \'javascriptreact': ['prettier', 'eslint'],
-      \'typescript': ['prettier', 'eslint']
+      \'typescript': ['prettier', 'eslint'],
+      \'typescriptreact': ['prettier', 'eslint']
       \}
 let g:ale_fix_on_save = 1
 
