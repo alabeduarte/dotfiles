@@ -14,8 +14,7 @@ install.brew:
 	@sh ./homebrew/install.sh
 
 install.vim:
-	@sh ./vim/install.sh
-	@brew install the_silver_searcher
+	@sh ./vim/vim-installer.sh install
 
 install.tmux:
 	@sh ./tmux/install.sh
@@ -39,7 +38,7 @@ configure.iterm2:
 	@sh ./iterm2/set_user_path.sh
 
 uninstall.vim:
-	@sh ./vim/uninstall.sh
+	@sh ./vim/vim-installer.sh uninstall
 
 uninstall.tmux:
 	@sh ./tmux/uninstall.sh
