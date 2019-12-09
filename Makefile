@@ -17,7 +17,7 @@ install.vim:
 	@sh ./vim/vim-installer.sh install
 
 install.tmux:
-	@sh ./tmux/install.sh
+	@sh ./tmux/tmux-installer.sh install
 
 install.zshell:
 	@sh ./zshell/install.sh
@@ -41,7 +41,7 @@ uninstall.vim:
 	@sh ./vim/vim-installer.sh uninstall
 
 uninstall.tmux:
-	@sh ./tmux/uninstall.sh
+	@sh ./tmux/tmux-installer.sh uninstall
 
 uninstall.zshell:
 	@sh ./zshell/uninstall.sh
