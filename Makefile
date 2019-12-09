@@ -37,10 +37,10 @@ tmux.uninstall:
 	@sh ./tmux/tmux-installer.sh uninstall
 
 zshell.install:
-	@sh ./zshell/install.sh
+	@sh ./zshell/zshell-installer.sh install
 
 zshell.uninstall:
-	@sh ./zshell/uninstall.sh
+	@sh ./zshell/zshell-installer.sh uninstall
 
 git_config.install:
 	@sh ./git-config/install.sh
