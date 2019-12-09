@@ -29,7 +29,8 @@ make install.vim      # install vim with custom plugins
 make install.tmux     # install tmux with custom plugins
 make install.zshell   # install zshell
 make install.vscode   # install vscode extensions and configs
-make dump.vscode      # reads your current vscode extensions and place it into a file
+make dump.vscode      # creates a file from all the existing VSCode extensions you have installed with
+make dump.brew        # creates a Brewfile from all the existing Homebrew packages you have installed with
 make configure.iterm2 # configure iterm2
 
 make uninstall        # uninstall everything, except homebrew
