@@ -7,7 +7,7 @@ echo 'Configuring better git log'
 git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 echo 'Configure vim as global editor'
-git config --global core.editor $(which vim)
+git config --global core.editor $(which nvim)
 
 echo 'Configure git aliases'
 git config --global alias.co checkout
