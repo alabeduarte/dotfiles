@@ -32,6 +32,9 @@ install.vscode:
 dump.vscode:
 	@sh ./vscode/bundler.sh dump
 
+dump.brew:
+	@brew bundle dump --file=homebrew/Brewfile -f
+
 configure.iterm2:
 	@sh ./iterm2/set_user_path.sh
 
@@ -52,6 +55,7 @@ uninstall.zshell:
 	install.git_config,	\
 	install.vscode, \
 	dump.vscode, \
+	dump.brew, \
 	configure.iterm2,	\
 	uninstall, \
 	uninstall.vim, \
