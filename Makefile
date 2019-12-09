@@ -11,7 +11,7 @@ uninstall: uninstall.vim \
 	uninstall.zshell
 
 install.brew:
-	@sh ./brew/install.sh
+	@sh ./homebrew/install.sh
 
 install.vim:
 	@sh ./vim/install.sh
