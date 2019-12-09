@@ -30,6 +30,7 @@ make install.tmux     # install tmux with custom plugins
 make install.zshell   # install zshell
 make install.vscode   # install vscode extensions and configs
 make dump.vscode      # creates a file from all the existing VSCode extensions you have installed with
+make bundle.brew      # install Homebrew packages from brew/Brewfile
 make dump.brew        # creates a Brewfile from all the existing Homebrew packages you have installed with
 make configure.iterm2 # configure iterm2
 

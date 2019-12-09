@@ -1,4 +1,6 @@
 install: install.brew \
+	bundle.brew \
+	install.fzf \
 	install.vim \
 	install.tmux \
 	install.zshell \
@@ -11,7 +13,13 @@ uninstall: uninstall.vim \
 	uninstall.zshell
 
 install.brew:
-	@sh ./homebrew/install.sh
+	@sh ./homebrew/brew-installer.sh install
+
+bundle.brew:
+	@sh ./homebrew/brew-installer.sh bundle
+
+install.fzf:
+	@sh ./homebrew/brew-installer.sh setup_fzf
 
 install.vim:
 	@sh ./vim/vim-installer.sh install
@@ -32,7 +40,7 @@ dump.vscode:
 	@sh ./vscode/bundler.sh dump
 
 dump.brew:
-	@brew bundle dump --file=homebrew/Brewfile -f
+	@sh ./homebrew/brew-installer.sh dump
 
 configure.iterm2:
 	@sh ./iterm2/set_user_path.sh
