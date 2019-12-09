@@ -24,18 +24,18 @@ configure your iterm2 or just ignore it.
 ### Other options
 
 ```
-make install.brew     # install homebrew
-make install.vim      # install vim with custom plugins
-make install.tmux     # install tmux with custom plugins
-make install.zshell   # install zshell
-make install.vscode   # install vscode extensions and configs
-make dump.vscode      # creates a file from all the existing VSCode extensions you have installed with
-make bundle.brew      # install Homebrew packages from brew/Brewfile
-make dump.brew        # creates a Brewfile from all the existing Homebrew packages you have installed with
-make configure.iterm2 # configure iterm2
+make brew.install     # install homebrew
+make brew.bundle      # install Homebrew packages from brew/Brewfile
+make brew.dump        # creates a Brewfile from all the existing Homebrew packages you have installed with
+make vim.install      # install vim with custom plugins
+make tmux.install     # install tmux with custom plugins
+make zshell.install   # install zshell
+make vscode.bundle    # install vscode extensions and configs
+make vscode.dump      # creates a file from all the existing VSCode extensions you have installed with
+make iterm2.configure # configure iterm2
 
 make uninstall        # uninstall everything, except homebrew
-make uninstall.vim    # unlink and remove .vimrc and plugins
-make uninstall.tmux   # unlink and remove tmux plugins
-make uninstall.zshell # unlink .zshrc and remove zshell
+make vim.uninstall    # unlink and remove .vimrc and plugins
+make tmux.uninstall   # unlink and remove tmux plugins
+make zshell.uninstall # unlink .zshrc and remove zshell
 ```

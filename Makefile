@@ -1,70 +1,71 @@
-install: install.brew \
-	bundle.brew \
-	install.fzf \
-	install.vim \
-	install.tmux \
-	install.zshell \
-	install.git_config \
-	install.vscode \
-	configure.iterm2
+install: brew.install \
+	brew.bundle \
+	fzf.install \
+	vim.install \
+	tmux.install \
+	zshell.install \
+	git_config.install \
+	vscode.bundle \
+	iterm2.configure
 
-uninstall: uninstall.vim \
-	uninstall.tmux \
-	uninstall.zshell
+uninstall: vim.uninstall \
+	tmux.uninstall \
+	zshell.uninstall
 
-install.brew:
+brew.install:
 	@sh ./homebrew/brew-installer.sh install
 
-bundle.brew:
+brew.bundle:
 	@sh ./homebrew/brew-installer.sh bundle
 
-install.fzf:
-	@sh ./homebrew/brew-installer.sh setup_fzf
-
-install.vim:
-	@sh ./vim/vim-installer.sh install
-
-install.tmux:
-	@sh ./tmux/tmux-installer.sh install
-
-install.zshell:
-	@sh ./zshell/install.sh
-
-install.git_config:
-	@sh ./git-config/install.sh
-
-install.vscode:
-	@sh ./vscode/bundler.sh bundle
-
-dump.vscode:
-	@sh ./vscode/bundler.sh dump
-
-dump.brew:
+brew.dump:
 	@sh ./homebrew/brew-installer.sh dump
 
-configure.iterm2:
-	@sh ./iterm2/set_user_path.sh
+fzf.install:
+	@sh ./homebrew/brew-installer.sh setup_fzf
 
-uninstall.vim:
+vim.install:
+	@sh ./vim/vim-installer.sh install
+
+vim.uninstall:
 	@sh ./vim/vim-installer.sh uninstall
 
-uninstall.tmux:
+tmux.install:
+	@sh ./tmux/tmux-installer.sh install
+
+tmux.uninstall:
 	@sh ./tmux/tmux-installer.sh uninstall
 
-uninstall.zshell:
+zshell.install:
+	@sh ./zshell/install.sh
+
+zshell.uninstall:
 	@sh ./zshell/uninstall.sh
 
+git_config.install:
+	@sh ./git-config/install.sh
+
+vscode.bundle:
+	@sh ./vscode/bundler.sh bundle
+
+vscode.dump:
+	@sh ./vscode/bundler.sh dump
+
+iterm2.install:
+	@sh ./iterm2/set_user_path.sh
+
 .PHONY: install, \
-	install.brew, \
-	install.vim, \
-	install.tmux, \
-	install.zshell, \
-	install.git_config,	\
-	install.vscode, \
-	dump.vscode, \
-	dump.brew, \
-	configure.iterm2,	\
-	uninstall, \
-	uninstall.vim, \
-	uninstall.tmux, \
-	uninstall.zshell
+	brew.install, \
+	brew.bundle \
+	brew.dump \
+	fzf.install \
+	vim.install \
+	vim.uninstall \
+	tmux.install \
+	tmux.uninstall \
+	zshell.install \
+	zshell.uninstall \
+	git_config.install \
+	vscode.bundle \
+	vscode.dump \
+	iterm2.install
