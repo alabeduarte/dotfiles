@@ -39,7 +39,6 @@ EOT
 uninstall()
 {
   unlink ~/.vimrc
-  rm -rf ~/.vim/bundle/Vundle.vim
 }
 
 $*
