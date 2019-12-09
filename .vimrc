@@ -77,6 +77,9 @@ Plug 'mhinz/vim-mix-format'
 " Elixir Integration Into Vim
 Plug 'slashmili/alchemist.vim'
 
+" Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Auto-format Javascript with ESLint
 Plug 'w0rp/ale'
 
