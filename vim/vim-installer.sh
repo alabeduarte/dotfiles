@@ -31,6 +31,16 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 EOT
+
+  setup_deoplete;
+}
+
+###
+# Setup deoplete
+###
+setup_deoplete()
+{
+  pip3 install --user --upgrade pynvim
 }
 
 ###

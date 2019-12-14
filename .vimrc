@@ -4,7 +4,8 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+
+  autocmd VimEnter * PlugInstall --sync | UpdateRemotePlugins | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -110,6 +111,9 @@ Plug 'hashivim/vim-terraform'
 " Precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 
+" Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Initialize plugin system
 call plug#end()
 
@@ -119,6 +123,12 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
+
+" Start depoplete (auto-complete) at startup
+let g:deoplete#enable_at_startup = 1
+
+" This instructs deoplete to use omni completion for Go files.
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " vim-ruby/vim-ruby
 " Enable Ruby syntax highlighting and indenting for .jbuilder files
