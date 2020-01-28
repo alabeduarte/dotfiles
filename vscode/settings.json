@@ -11,5 +11,20 @@
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "mjmcloug.vscode-elixir",
     "terminal.integrated.fontFamily": "MesloLGL Nerd Font",
-    "workbench.panel.defaultLocation": "right"
+    "workbench.panel.defaultLocation": "right",
+    "go.formatOnSave": true,
+    "go.buildOnSave": "package",
+    "go.lintOnSave": "package",
+    "go.lintTool": "golint",
+    "go.vetOnSave": "package",
+    "go.buildFlags": [],
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": false,
+    "go.goroot": "/usr/local/go",
+    "go.gopath": "/Users/bill/code/go",
+    "go.formatTool": "goimports",
+    "go.gocodeAutoBuild": true,
+    "go.enableCodeLens": {"references": false, "runtest": false}
 }
