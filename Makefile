@@ -5,8 +5,7 @@ install: brew.install \
 	tmux.install \
 	zshell.install \
 	git_config.install \
-	vscode.bundle \
-	iterm2.configure
+	vscode.bundle
 
 uninstall: vim.uninstall \
 	tmux.uninstall \
