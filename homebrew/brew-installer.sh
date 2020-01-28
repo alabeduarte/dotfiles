@@ -30,7 +30,7 @@ dump()
 ###
 setup_fzf()
 {
-  sh ./fzf-key-bindings.install.sh
+  sh ./homebrew/fzf-key-bindings-install.sh
 }
 
 $*
