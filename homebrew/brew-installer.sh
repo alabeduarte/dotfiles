@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exu
+
 ###
 # Install homebrew
 ###
@@ -22,7 +24,7 @@ bundle()
 ###
 dump()
 {
-  brew bundle dump --file=homebrew/Brewfile -f
+  brew bundle dump --file=homebrew/Brewfile --force
 }
 
 ###
