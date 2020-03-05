@@ -163,6 +163,15 @@ nnoremap \ :Ag<SPACE>
 " Leader
 let mapleader=","
 
+" Clipboard settings
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+" Quickfix close
+nnoremap <silent> <leader>a :cclose<CR>:lclose<CR>
+
 " Toggle NERDTree
 map <leader>e :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
@@ -202,9 +211,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set nowrap
-set textwidth=80
 set linebreak
+set textwidth=80
 set colorcolumn=80
+set colorcolumn=+1
 
 " -----------------------------------------------------------------------------
 " Color Scheme
@@ -221,6 +231,9 @@ hi Directory guifg=#8ac6f2
 
 " Searing red very visible cursor
 hi Cursor guibg=red
+
+" Column color
+":hi ColorColumn ctermbg=DarkBlue guibg=blue
 
 " Use same color behind concealed unicode characters
 hi clear Conceal
