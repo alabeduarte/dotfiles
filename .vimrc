@@ -62,13 +62,6 @@ Plug 'ryanoasis/vim-devicons'
 " Vim Markdown runtime files
 Plug 'tpope/vim-markdown'
 
-" Vim/Ruby Configuration Files
-Plug 'vim-ruby/vim-ruby'
-
-" This is a massive (in a good way) Vim plugin for editing Ruby on Rails
-" applications.
-Plug 'tpope/vim-rails'
-
 " Vim configuration files for Elixir
 Plug 'elixir-lang/vim-elixir'
 
@@ -136,10 +129,6 @@ let g:deoplete#enable_at_startup = 1
 " This instructs deoplete to use omni completion for Go files.
 call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
-" vim-ruby/vim-ruby
-" Enable Ruby syntax highlighting and indenting for .jbuilder files
-au BufRead,BufNewFile *.jbuilder setfiletype ruby
-
 " MaxMEllon/vim-jsx-pretty
 " Colorful style (vim-javascript only)
 let g:vim_jsx_pretty_colorful_config = 1
@@ -178,11 +167,6 @@ let NERDTreeShowHidden=1
 
 " Prompt for a command to run
 map <leader>vp :VimuxPromptCommand<CR>
-
-" Run current rspecs
-map <leader>rs :call VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))<CR>
-" Run rspecs
-map <leader>rb :call VimuxRunCommand("clear; bundle exec rspec ")<CR>
 
 " Run all npm tests
 map <leader>nt :call VimuxRunCommand("clear; npm test ")<CR>
