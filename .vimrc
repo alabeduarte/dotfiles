@@ -26,9 +26,6 @@ Plug 'junegunn/fzf.vim'
 " Vim plugin for the_silver_searcher, 'ag'
 Plug 'rking/ag.vim'
 
-" Lean & mean status/tabline for vim that's light as air
-Plug 'bling/vim-airline'
-
 " Is all about "surroundings": parentheses, brackets, quotes, XML tags, and more
 Plug 'tpope/vim-surround'
 
