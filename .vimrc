@@ -35,25 +35,14 @@ Plug 'tpope/vim-surround'
 " Provides insert mode auto-completion for quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
 
-" Wisely add "end" in ruby, endfunction/endif/more in vim script, etc
-Plug 'tpope/vim-endwise'
-
 " Perform all your vim insert mode completions with Tab
 Plug 'ervandew/supertab'
-
-" Pasting in Vim with indentation adjusted to destination context
-Plug 'sickill/vim-pasta'
 
 " Vim plugin to list, select and switch between buffers.
 Plug 'jeetsukumaran/vim-buffergator'
 
 " Better whitespace highlighting for Vim
 Plug 'ntpeters/vim-better-whitespace'
-
-" Simpler way to use some motions in vim. It takes the <number> out of <number>w
-" or <number>f{char} by highlighting all possible choices and allowing you to
-" press one key to jump directly to the target
-Plug 'Lokaltog/vim-easymotion'
 
 " Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline,
 " Powerline, Unite, vim-startify and more
@@ -159,9 +148,6 @@ let NERDTreeShowHidden=1
 " Prompt for a command to run
 map <leader>vp :VimuxPromptCommand<CR>
 
-" Run all npm tests
-map <leader>nt :call VimuxRunCommand("clear; npm test ")<CR>
-
 " Run last command
 map <leader>rl :VimuxRunLastCommand<CR>"
 
@@ -206,9 +192,6 @@ hi Directory guifg=#8ac6f2
 
 " Searing red very visible cursor
 hi Cursor guibg=red
-
-" Column color
-":hi ColorColumn ctermbg=DarkBlue guibg=blue
 
 " Use same color behind concealed unicode characters
 hi clear Conceal
