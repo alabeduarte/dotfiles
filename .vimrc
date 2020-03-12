@@ -62,15 +62,6 @@ Plug 'ryanoasis/vim-devicons'
 " Vim Markdown runtime files
 Plug 'tpope/vim-markdown'
 
-" Vim configuration files for Elixir
-Plug 'elixir-lang/vim-elixir'
-
-" Vim integration for the Elixir formatter
-Plug 'mhinz/vim-mix-format'
-
-" Elixir Integration Into Vim
-Plug 'slashmili/alchemist.vim'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -245,11 +236,6 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:webdevicons_conceal_nerdtree_brackets = 0
 let NERDTreeMinimalUI = 1
-
-" -----------------------------------------------------------------------------
-" Elixir code format
-" -----------------------------------------------------------------------------
-let g:mix_format_on_save = 1
 
 " -----------------------------------------------------------------------------
 " Go code format
