@@ -3,8 +3,6 @@ dotfiles
 
 Personalised dotfiles.
 
-`.tmux.conf` powered by [@gtramontina](https://github.com/gtramontina) :+1:
-
 ### Setup
 
 Running `make install` command will download `homebrew` to further install `vim`, `tmux` and `zshell` configurations.
@@ -14,12 +12,6 @@ The configurations are installed based on symbolic links. Whenever you clone thi
 ```
 $ make install
 ```
-
-#### iterm2
-
-As part of the installation, a new file will be generated at the root of this
-repository called `<YOUR_USERNAME>-iterm2-config.plist`, so you can use this file to
-configure your iterm2 or just ignore it.
 
 ### Other options
 
