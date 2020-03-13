@@ -27,22 +27,6 @@ fpath=($ZSH/custom/plugins/zsh-completions/src $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
-# Ruby
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-# Java
-export PATH="$HOME/.jenv/bin:$PATH"
-
-# Nodejs
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-if [ -r .nvmrc ]; then
-  version=`cat .nvmrc`
-  echo "[ Using Node v$version ]"
-  nvm use $version
-fi
-
 # Go
 export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
