@@ -48,3 +48,5 @@ alias diff='git --no-pager diff --color=auto --no-ext-diff --no-index'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="/usr/local/sbin:$PATH"
+
+export GPG_TTY=$(tty)
