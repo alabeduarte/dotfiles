@@ -6,7 +6,7 @@ export ZSH=~/.oh-my-zsh
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="white"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir rbenv nvm newline vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir nvm newline vcs)
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 
@@ -26,6 +26,12 @@ plugins=(git jump zsh-completions)
 fpath=($ZSH/custom/plugins/zsh-completions/src $fpath)
 
 source $ZSH/oh-my-zsh.sh
+
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+
+# This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # Go
 export GOPATH=$HOME/Go
