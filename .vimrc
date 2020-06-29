@@ -73,7 +73,7 @@ Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plug 'hashivim/vim-terraform'
 
 " Precision colorscheme for the vim text editor
-Plug 'altercation/vim-colors-solarized'
+Plug 'flrnd/candid.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -154,8 +154,16 @@ set colorcolumn=+1
 " -----------------------------------------------------------------------------
 try
   syntax enable
+
+  " important:
+  set termguicolors
+
   set background=dark
-  colorscheme solarized
+  syntax on
+  colorscheme candid
+
+  " Lightline
+  let g:lightline = { 'colorscheme': 'candid' }
 catch
 endtry
 
