@@ -51,17 +51,11 @@ Plug 'tpope/vim-markdown'
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" Auto-format Javascript with ESLint
-Plug 'w0rp/ale'
-
-" Vastly improved Javascript indentation and syntax support in Vim.
-Plug 'yuezk/vim-js'
-
-" React JSX syntax highlighting and indenting for vim.
-Plug 'maxmellon/vim-jsx-pretty'
-
-" TypeScript support for vim
-Plug 'HerringtonDarkholme/yats.vim'
+" Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 " Provides support for expanding abbreviations
 Plug 'mattn/emmet-vim'
@@ -81,15 +75,6 @@ Plug 'hashivim/vim-terraform'
 " Precision colorscheme for the vim text editor
 Plug 'altercation/vim-colors-solarized'
 
-" Dark powered asynchronous completion framework for neovim/Vim8
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 " Initialize plugin system
 call plug#end()
 
@@ -99,16 +84,6 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
-
-" Start depoplete (auto-complete) at startup
-let g:deoplete#enable_at_startup = 1
-
-" This instructs deoplete to use omni completion for Go files.
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-
-" MaxMEllon/vim-jsx-pretty
-" Colorful style (vim-javascript only)
-let g:vim_jsx_pretty_colorful_config = 1
 
 " junegunn/fzf
 " Enable fzf in vim
@@ -232,19 +207,32 @@ let g:go_metalinter_autosave = 0
 " -----------------------------------------------------------------------------
 " Javascript code format
 " -----------------------------------------------------------------------------
-let g:ale_fixers = {
-      \'javascript': ['prettier', 'eslint'],
-      \'javascriptreact': ['prettier', 'eslint'],
-      \'typescript': ['prettier', 'eslint'],
-      \'typescriptreact': ['prettier', 'eslint']
-      \}
-let g:ale_fix_on_save = 1
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
 
-" Enable completion where available.
-" This setting must be set before ALE is loaded.
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+" -----------------------------------------------------------------------------
+" Coc config
 "
-" You should not turn this setting on if you wish to use ALE as a completion
-" source for other completion plugins, like Deoplete.
-let g:ale_completion_enabled = 0
-let g:ale_completion_tsserver_autoimport = 1
-set omnifunc=ale#completion#OmniFunc
+" Credits to https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
+" -----------------------------------------------------------------------------
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#util#has_float() == 0)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
