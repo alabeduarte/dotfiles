@@ -66,6 +66,9 @@ Plug 'othree/html5.vim'
 " Vim syntax for LESS (dynamic CSS)
 Plug 'groenewege/vim-less'
 
+" Vim syntax for tsx
+Plug 'peitalin/vim-jsx-typescript'
+
 " Syntax highlighting for Dockerfiles
 Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 
@@ -222,6 +225,12 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+
+" Auto-format
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" set filetypes as typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
 " -----------------------------------------------------------------------------
 " Coc config
