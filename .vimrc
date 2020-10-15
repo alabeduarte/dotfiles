@@ -67,7 +67,7 @@ Plug 'othree/html5.vim'
 Plug 'groenewege/vim-less'
 
 " Vim syntax for tsx
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 
 " Syntax highlighting for Dockerfiles
 Plug 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
