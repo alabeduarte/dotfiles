@@ -235,24 +235,14 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
-" -----------------------------------------------------------------------------
-" Coc config
-"
-" Credits to https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
-" -----------------------------------------------------------------------------
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
-
-function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
-
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
+
+" Using `map` delays getting out of insert mode by timeoutlen!
+for i in range(97,122)
+  let c = nr2char(i)
+  "exec "map \e".c." <M-".c.">"
+  "exec "map! \e".c." <M-".c.">"
+  exec "nmap \e".c." <M-".c.">"
+endfor
