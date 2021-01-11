@@ -26,5 +26,11 @@
     "go.gopath": "/Users/bill/code/go",
     "go.formatTool": "goimports",
     "go.gocodeAutoBuild": true,
-    "go.enableCodeLens": {"references": false, "runtest": false}
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": false
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
