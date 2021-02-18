@@ -48,6 +48,9 @@ alias diff='git --no-pager diff --color=auto --no-ext-diff --no-index'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+
 export PATH="/usr/local/sbin:$PATH"
 
 export GPG_TTY=$(tty)
