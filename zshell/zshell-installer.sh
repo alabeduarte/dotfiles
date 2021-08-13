@@ -9,8 +9,8 @@ install()
   # Downloads oh my zshell
   curl -L http://install.ohmyz.sh | sh
 
-  git clone https://github.com/Powerlevel9k/powerlevel9k.git \
-    ~/.oh-my-zsh/custom/themes/powerlevel9k
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+    ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
   git clone https://github.com/zsh-users/zsh-completions.git \
     ~/.oh-my-zsh/custom/plugins/zsh-completions
