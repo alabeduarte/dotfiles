@@ -16,15 +16,15 @@ $ make install
 ### Other options
 
 ```
-make brew.install     # install homebrew
-make brew.bundle      # install Homebrew packages from brew/Brewfile
-make brew.dump        # creates a Brewfile from all the existing Homebrew packages you have installed with
-make vim.install      # install vim with custom plugins
-make tmux.install     # install tmux with custom plugins
-make zshell.install   # install zshell
-make vscode.bundle    # install vscode extensions and configs
-make vscode.dump      # creates a file from all the existing VSCode extensions you have installed with
-make iterm2.configure # configure iterm2
+make brew.install       # install homebrew
+make brew.bundle        # install Homebrew packages from brew/Brewfile
+make brew.dump          # creates a Brewfile from all the existing Homebrew packages you have installed with
+make vim.install        # install vim with custom plugins
+make tmux.install       # install tmux with custom plugins
+make zshell.install     # install zshell
+make vscode.bundle      # install vscode extensions and configs
+make vscode.dump        # creates a file from all the existing VSCode extensions you have installed with
+make terminal.configure # configure terminal
 
 make uninstall        # uninstall everything, except homebrew
 make vim.uninstall    # unlink and remove .vimrc and plugins

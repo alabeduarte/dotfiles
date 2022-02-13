@@ -5,11 +5,13 @@ install: brew.install \
 	tmux.install \
 	zshell.install \
 	git_config.install \
+	terminal.install \
 	vscode.bundle
 
 uninstall: vim.uninstall \
 	tmux.uninstall \
-	zshell.uninstall
+	zshell.uninstall \
+	terminal.uninstall
 
 brew.install:
 	@sh ./homebrew/brew-installer.sh install
@@ -50,8 +52,11 @@ vscode.bundle:
 vscode.dump:
 	@sh ./vscode/bundler.sh dump
 
-iterm2.install:
-	@sh ./iterm2/set_user_path.sh
+terminal.install:
+	@sh ./terminal/terminal-installer.sh install
+
+terminal.uninstall:
+	@sh ./terminal/terminal-installer.sh uninstall
 
 .PHONY: install, \
 	brew.install, \
@@ -67,4 +72,5 @@ iterm2.install:
 	git_config.install \
 	vscode.bundle \
 	vscode.dump \
-	iterm2.install
+	terminal.install \
+	terminal.uninstall
