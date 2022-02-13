@@ -6,7 +6,7 @@
 install()
 {
   config_dir=`pwd`/.kitty.conf
-  echo "export KITTY_CONFIG_DIRECTORY=$config_dir" >> ~/.zshrc
+  echo "export KITTY_CONFIG_DIRECTORY=\"$config_dir\"" >> ~/.zshrc
 }
 
 ###
