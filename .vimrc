@@ -135,6 +135,7 @@ map <leader>g :ALEGoToDefinition<CR>
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+set mouse=r
 set autowriteall
 set noswapfile
 
