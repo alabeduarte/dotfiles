@@ -26,8 +26,8 @@ make vscode.bundle      # install vscode extensions and configs
 make vscode.dump        # creates a file from all the existing VSCode extensions you have installed with
 make terminal.configure # configure terminal
 
-make uninstall        # uninstall everything, except homebrew
-make vim.uninstall    # unlink and remove .vimrc and plugins
-make tmux.uninstall   # unlink and remove tmux plugins
-make zshell.uninstall # unlink .zshrc and remove zshell
+make uninstall          # uninstall everything, except homebrew
+make vim.uninstall      # unlink and remove .vimrc and plugins
+make tmux.uninstall     # unlink and remove tmux plugins
+make zshell.uninstall   # unlink .zshrc and remove zshell
 ```
