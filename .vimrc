@@ -224,6 +224,7 @@ let g:go_metalinter_autosave = 0
 " -----------------------------------------------------------------------------
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
+  command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 endif
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
