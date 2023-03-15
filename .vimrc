@@ -237,9 +237,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 " set filetypes as typescript.tsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
 
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gr <Plug>(coc-references)
+
 
 " Using `map` delays getting out of insert mode by timeoutlen!
 for i in range(97,122)
@@ -258,3 +256,13 @@ nmap <leader>d :GoDecls<CR>
 
 " [Go] open implementation
 nmap <C-i> :GoImplements<CR>
+
+" Go to definition
+nmap <C-]> <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
+
+" Go to type definition
+nmap <silent> gy <Plug>(coc-type-definition)
+
+" Go to references
+nmap <silent> gr <Plug>(coc-references)
