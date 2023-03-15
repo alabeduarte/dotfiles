@@ -248,3 +248,13 @@ for i in range(97,122)
   "exec "map! \e".c." <M-".c.">"
   exec "nmap \e".c." <M-".c.">"
 endfor
+
+" -----------------------------------------------------------------------------
+" Code navigation
+" -----------------------------------------------------------------------------
+
+" [Go] open declarations
+nmap <leader>d :GoDecls<CR>
+
+" [Go] open implementation
+nmap <C-i> :GoImplements<CR>
