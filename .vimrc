@@ -117,17 +117,17 @@ noremap <Leader>P "+p
 nnoremap <silent> <leader>a :cclose<CR>:lclose<CR>
 
 " Toggle NERDTree
-map <leader>e :NERDTreeToggle<CR>
+nmap <leader>e :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Prompt for a command to run
-map <leader>vp :VimuxPromptCommand<CR>
+nmap <leader>vp :VimuxPromptCommand<CR>
 
 " Run last command
-map <leader>rl :VimuxRunLastCommand<CR>"
+nmap <leader>rl :VimuxRunLastCommand<CR>"
 
 " Go to definition
-map <leader>g :ALEGoToDefinition<CR>
+nmap <leader>g :ALEGoToDefinition<CR>
 
 " -----------------------------------------------------------------------------
 " Common editor configs
