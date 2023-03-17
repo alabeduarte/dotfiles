@@ -255,7 +255,7 @@ endfor
 nmap <leader>d :GoDecls<CR>
 
 " [Go] open implementation
-nmap <C-i> :GoImplements<CR>
+nmap <C-\> :GoImplements<CR>
 
 " Go to definition
 nmap <C-]> <Plug>(coc-definition)
