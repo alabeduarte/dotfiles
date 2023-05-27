@@ -9,6 +9,9 @@ git config --global alias.l "log --color --graph --pretty=format:'%Cred%h%Creset
 echo 'Configure vim as global editor'
 git config --global core.editor $(which nvim)
 
+echo 'Auto sign commits'
+git config --global commit.gpgsign true
+
 echo 'Configure git aliases'
 git config --global alias.co checkout
 git config --global alias.br branch
