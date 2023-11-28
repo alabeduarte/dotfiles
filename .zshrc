@@ -46,7 +46,7 @@ export PATH=$PATH:$GOROOT/bin
 
 # Aliases
 alias v="nvim"
-alias l='exa -l'
+alias l='eza -l'
 alias make='gmake'
 alias chrome-dev='open -a Google\ Chrome\ Canary --args --disable-web-security --user-data-dir=$HOME/profile-folder-name'
 alias diff='git --no-pager diff --color=auto --no-ext-diff --no-index'
