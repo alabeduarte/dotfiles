@@ -40,7 +40,7 @@ EOT
 ###
 setup_deoplete()
 {
-  pip3 install --user --upgrade pynvim
+  pip3 install --user --upgrade --break-system-packages pynvim
 }
 
 ###
