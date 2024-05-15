@@ -20,7 +20,7 @@ Plug 'benmills/vimux'
 Plug 'airblade/vim-gitgutter'
 
 " Fuzzy file, buffer, mru, tag, etc finder
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Vim plugin for the_silver_searcher, 'ag'
@@ -87,10 +87,6 @@ call plug#end()
 
 filetype plugin indent on
 syntax on
-
-" junegunn/fzf
-" Enable fzf in vim
-set rtp+=/usr/local/opt/fzf
 
 " junegunn/fzf
 " Enable CTRL-P
