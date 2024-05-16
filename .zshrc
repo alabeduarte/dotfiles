@@ -39,8 +39,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # Go
-export GOPATH=$HOME/Go
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+# Homebrew
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
