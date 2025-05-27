@@ -205,15 +205,18 @@ let NERDTreeMinimalUI = 1
 " -----------------------------------------------------------------------------
 " Go code format
 " -----------------------------------------------------------------------------
-let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_autosave = 0
+
+let g:coc_global_extensions = ['coc-go']
+
+" Enable Vim-go's syntax highlighting for linting
+let g:go_highlight_diagnostic_errors = 1
+let g:go_highlight_diagnostic_warnings = 1
 
 " -----------------------------------------------------------------------------
 " Javascript code format
