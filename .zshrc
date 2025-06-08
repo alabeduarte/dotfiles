@@ -25,7 +25,7 @@ POWERLEVEL9K_VCS_COMMIT_ICON='\uE729 '
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git jump zsh-completions gpg-agent keychain)
+plugins=(git jump zsh-completions)
 
 # zsh-completions: reloading the completion
 fpath=($ZSH/custom/plugins/zsh-completions/src $fpath)
