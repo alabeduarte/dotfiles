@@ -1,35 +1,23 @@
 #!/bin/bash
 
-###
-# Creates symbolic link
-###
 create_sym_link() {
-  #rm -rf ~/.vimrc
-  #ln -s `pwd`/.vimrc ~/.vimrc
-  ln -s $(pwd)/nvim ~/.config/nvim
-}
-
-###
-# Setup neovim
-###
-setup_neovim() {
+  # Remove existing file/dir/symlink
   rm -rf ~/.config/nvim
-  mkdir -p ~/.config/nvim
+  ln -s "$(pwd)/nvim" ~/.config/nvim
 }
 
-###
-# Install
-###
-install() {
-  setup_neovim
+setup_neovim() {
   create_sym_link
 }
 
-###
-# Uninstall
-###
+install() {
+  setup_neovim
+}
+
 uninstall() {
-  unlink ~/.config/nvim
+  if [ -L ~/.config/nvim ] || [ -d ~/.config/nvim ]; then
+    rm -rf ~/.config/nvim
+  fi
 }
 
 $*
