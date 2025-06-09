@@ -5,8 +5,7 @@ install: brew.install \
 	tmux.install \
 	zshell.install \
 	git_config.install \
-	terminal.install \
-	vscode.bundle
+	terminal.install
 
 uninstall: vim.uninstall \
 	tmux.uninstall \
@@ -46,12 +45,6 @@ zshell.uninstall:
 git_config.install:
 	@sh ./git-config/install.sh
 
-vscode.bundle:
-	@sh ./vscode/bundler.sh bundle
-
-vscode.dump:
-	@sh ./vscode/bundler.sh dump
-
 terminal.install:
 	@sh ./terminal/terminal-installer.sh install
 
@@ -70,7 +63,5 @@ terminal.uninstall:
 	zshell.install \
 	zshell.uninstall \
 	git_config.install \
-	vscode.bundle \
-	vscode.dump \
 	terminal.install \
 	terminal.uninstall

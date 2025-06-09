@@ -1,5 +1,4 @@
-dotfiles
-========
+# dotfiles
 
 Personalised dotfiles.
 
@@ -10,7 +9,7 @@ Running `make install` command will download `homebrew` to further install `vim`
 The configurations are installed based on symbolic links. Whenever you clone this repo and install it, the configuration files will me mapped into your home, but the real source will remain on the directoy you cloned it. The reason behind it is that any change on these configs can be further versioned on git without messing around with your home directory.
 
 ```
-$ make install
+make install
 ```
 
 ### Other options
@@ -22,8 +21,6 @@ make brew.dump          # creates a Brewfile from all the existing Homebrew pack
 make vim.install        # install vim with custom plugins
 make tmux.install       # install tmux with custom plugins
 make zshell.install     # install zshell
-make vscode.bundle      # install vscode extensions and configs
-make vscode.dump        # creates a file from all the existing VSCode extensions you have installed with
 make terminal.configure # configure terminal
 
 make uninstall          # uninstall everything, except homebrew
