@@ -11,6 +11,9 @@ map("n", "<leader>p", '"*p', opts)
 map("n", "<leader>Y", '"+y', opts)
 map("n", "<leader>P", '"+p', opts)
 
+-- CodeCompanion
+vim.keymap.set({ "n", "v" }, "<C-p>", ":CodeCompanion<CR>", { desc = "Trigger CodeCompanion prompt" })
+
 -- Quickfix close
 --map("n", "<leader>a", ":cclose<CR>:lclose<CR>", opts)
 
