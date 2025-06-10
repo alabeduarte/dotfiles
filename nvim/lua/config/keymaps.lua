@@ -17,10 +17,6 @@ vim.keymap.set({ "n", "v" }, "<C-p>", ":CodeCompanion<CR>", { desc = "Trigger Co
 -- Quickfix close
 --map("n", "<leader>a", ":cclose<CR>:lclose<CR>", opts)
 
--- Vimux commands
---map("n", "<leader>vp", ":VimuxPromptCommand<CR>", opts)
---map("n", "<leader>rl", ":VimuxRunLastCommand<CR>", opts)
-
 -- Syntax re-sync
 -- map("n", "<leader>s", ":syntax sync fromstart<CR>", opts)
 
