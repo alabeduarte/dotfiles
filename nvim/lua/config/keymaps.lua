@@ -11,8 +11,10 @@ map("n", "<leader>p", '"*p', opts)
 map("n", "<leader>Y", '"+y', opts)
 map("n", "<leader>P", '"+p', opts)
 
--- CodeCompanion
-vim.keymap.set({ "n", "v" }, "<C-p>", ":CodeCompanion<CR>", { desc = "Trigger CodeCompanion prompt" })
+-- LSP
+vim.keymap.set("i", "<C-Space>", function()
+  vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-x><C-o>", true, true, true), "n")
+end, { desc = "Trigger code completion" })
 
 -- Quickfix close
 --map("n", "<leader>a", ":cclose<CR>:lclose<CR>", opts)
@@ -24,8 +26,8 @@ vim.keymap.set({ "n", "v" }, "<C-p>", ":CodeCompanion<CR>", { desc = "Trigger Co
 --map("n", "<leader>f", "<Plug>(coc-format-selected)", opts)
 
 -- Go-specific navigation
--- map("n", "<leader>d", ":GoDecls<CR>", opts)
--- map("n", "<C-\\>", ":GoImplements<CR>", opts)
+map("n", "<leader>d", ":GoDecls<CR>", opts)
+map("n", "<C-\\>", ":GoImplements<CR>", opts)
 -- map("n", "<leader>g", ":ALEGoToDefinition<CR>", opts)
 
 -- FZF file search

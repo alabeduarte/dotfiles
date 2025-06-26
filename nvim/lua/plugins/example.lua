@@ -55,10 +55,16 @@ return {
     -- change some options
     opts = {
       defaults = {
+        file_ignore_patterns = {}, -- Clear default ignore patterns if needed
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+      },
+      pickers = {
+        find_files = {
+          hidden = true, -- Show hidden files by default
+        },
       },
     },
   },
