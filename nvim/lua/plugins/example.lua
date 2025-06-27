@@ -64,6 +64,7 @@ return {
       pickers = {
         find_files = {
           hidden = true, -- Show hidden files by default
+          no_ignore = true, -- Show .gitignore files
         },
       },
     },
