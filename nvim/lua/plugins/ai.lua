@@ -2,8 +2,7 @@ return {
   "olimorris/codecompanion.nvim",
   lazy = true,
   keys = {
-    { "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", mode = "n", desc = "Code Companion Chat" },
-    { "<leader>ac", "<cmd>CodeCompanionChat Add<cr>", mode = "v", desc = "Code Companion Chat" },
+    { "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", mode = { "n", "v" }, desc = "Code Companion Chat" },
     { "<leader>aa", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "Code Companion Chat" },
     { "<C-p>", ":CodeCompanion<CR>", mode = { "n", "v" }, desc = "Trigger CodeCompanion prompt" },
   },
