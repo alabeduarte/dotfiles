@@ -14,11 +14,17 @@ return {
     dependencies = { "folke/snacks.nvim" },
     opts = {
       terminal_cmd = "claude",
+      track_selection = true,
       terminal = {
         split_side = "right",
-        slit_width_percentage = 0.60,
-        provider = "auto", -- "auto", "snacks", "native"
+        split_width_percentage = 0.60,
+        provider = "auto", -- "auto", "snacks", or "native"
         auto_close = false,
+      },
+      diff_opts = {
+        auto_close_on_accept = true,
+        vertical_split = true,
+        open_in_current_tab = true,
       },
     },
     keys = {
