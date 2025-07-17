@@ -18,7 +18,6 @@ return {
       terminal = {
         split_side = "right",
         split_width_percentage = 0.60,
-        provider = "auto", -- "auto", "snacks", or "native"
         auto_close = false,
       },
       diff_opts = {
