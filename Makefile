@@ -5,6 +5,7 @@ install: brew.install \
 	tmux.install \
 	zshell.install \
 	git_config.install \
+	gpg.install \
 	terminal.install
 
 uninstall: vim.uninstall \
@@ -45,6 +46,12 @@ zshell.uninstall:
 git_config.install:
 	@sh ./git-config/install.sh
 
+gpg.install:
+	@sh ./gpg/install.sh install
+
+gpg.uninstall:
+	@sh ./gpg/install.sh uninstall
+
 terminal.install:
 	@sh ./terminal/terminal-installer.sh install
 
@@ -63,5 +70,7 @@ terminal.uninstall:
 	zshell.install \
 	zshell.uninstall \
 	git_config.install \
+	gpg.install \
+	gpg.uninstall \
 	terminal.install \
 	terminal.uninstall
