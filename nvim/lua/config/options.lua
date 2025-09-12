@@ -4,6 +4,3 @@
 
 -- Set leader key
 vim.g.mapleader = ","
-
--- Set Fzf
-vim.g.lazyvim_picker = "fzf"
