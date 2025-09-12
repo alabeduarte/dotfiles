@@ -11,6 +11,9 @@ map("n", "<leader>p", '"*p', opts)
 map("n", "<leader>Y", '"+y', opts)
 map("n", "<leader>P", '"+p', opts)
 
+-- Markdown
+vim.keymap.set("i", "<C-l>", "```<CR><CR>```<Esc>kA", { desc = "Insert markdown code block" })
+
 -- LSP
 vim.keymap.set("i", "<C-Space>", function()
   vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-x><C-o>", true, true, true), "n")
