@@ -135,6 +135,14 @@ set mouse=r
 set autowriteall
 set noswapfile
 
+" This will limit the lines Vim checks to sync highlighting, reducing lag and
+" reducing breakage chances.
+syntax sync minlines=150
+syntax sync maxlines=200
+
+" Re-sync syntax
+nnoremap <Leader>s :syntax sync fromstart<CR>
+
 " turn on number and turn off relativenumber
 set number norelativenumber
 
