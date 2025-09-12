@@ -6,3 +6,5 @@
 vim.g.mapleader = ","
 
 vim.g.lazyvim_picker = "fzf"
+
+vim.opt.colorcolumn = "80"
