@@ -57,6 +57,8 @@ alias diff='git --no-pager diff --color=auto --no-ext-diff --no-index'
 
 # Setting fd as the default source for fzf
 export FZF_DEFAULT_COMMAND='fd --type f'
+# Setting the theme for the file preview when using fzf on vim
+export BAT_THEME="Nord"
 
 export PATH="/usr/local/sbin:$PATH"
 
