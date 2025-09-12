@@ -25,11 +25,6 @@ end, { desc = "Trigger code completion" })
 -- Auto-format
 --map("n", "<leader>f", "<Plug>(coc-format-selected)", opts)
 
--- Go-specific navigation
-map("n", "<leader>d", ":GoDecls<CR>", opts)
-map("n", "<C-\\>", ":GoImplements<CR>", opts)
--- map("n", "<leader>g", ":ALEGoToDefinition<CR>", opts)
-
 -- FZF file search
 -- map("n", "<C-p>", ":Files<CR>", opts)
 
