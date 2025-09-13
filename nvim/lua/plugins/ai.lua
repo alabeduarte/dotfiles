@@ -33,21 +33,7 @@ return {
       { "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
       { "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
       { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
-      {
-        "<leader>as",
-        function()
-          -- Check connection status first
-          local ok, _ = pcall(function() vim.cmd("ClaudeCodeStatus") end)
-          if not ok then
-            -- If status check fails, try to resume/reconnect
-            vim.cmd("ClaudeCode --resume")
-            vim.wait(500) -- Give it time to reconnect
-          end
-          vim.cmd("ClaudeCodeSend")
-        end,
-        mode = "v",
-        desc = "Send to Claude"
-      },
+      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
       {
         "<leader>as",
         "<cmd>ClaudeCodeTreeAdd<cr>",
