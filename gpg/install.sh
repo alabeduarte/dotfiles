@@ -37,9 +37,10 @@ install() {
 
   # Create or update gpg-agent.conf
   echo "Configuring gpg-agent to use pinentry-mac..."
+  PINENTRY_PATH="$(brew --prefix)/bin/pinentry-mac"
   cat >"$GPG_AGENT_CONF" <<EOF
 # Use pinentry-mac for passphrase entry
-pinentry-program /opt/homebrew/bin/pinentry-mac
+pinentry-program $PINENTRY_PATH
 
 # Cache passphrases for 1 hour
 default-cache-ttl 3600
