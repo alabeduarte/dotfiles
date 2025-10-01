@@ -34,11 +34,12 @@ return {
   -- Auto-install tools via Mason
   {
     "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "eslint_d",
-      },
-    },
+    opts = function(_, opts)
+      if opts.ensure_installed == nil then
+        opts.ensure_installed = {}
+      end
+      vim.list_extend(opts.ensure_installed, { "eslint_d" })
+    end,
   },
   -- Configure conform.nvim to respect project ESLint configs
   {
