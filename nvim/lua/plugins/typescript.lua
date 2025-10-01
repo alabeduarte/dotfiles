@@ -33,7 +33,7 @@ return {
   },
   -- Auto-install tools via Mason
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "eslint_d",
@@ -53,10 +53,14 @@ return {
       formatters = {
         eslint_d = {
           condition = function(ctx)
-            return vim.fs.find({ ".eslintrc.js", ".eslintrc.json", ".eslintrc.yml", ".eslintrc.yaml", "eslint.config.js" }, { path = ctx.filename, upward = true })[1]
+            return vim.fs.find(
+              { ".eslintrc.js", ".eslintrc.json", ".eslintrc.yml", ".eslintrc.yaml", "eslint.config.js" },
+              { path = ctx.filename, upward = true }
+            )[1]
           end,
         },
       },
     },
   },
 }
+
