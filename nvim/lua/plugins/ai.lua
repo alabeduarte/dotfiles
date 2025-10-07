@@ -1,3 +1,29 @@
+local function resize_claude_terminal(percentage)
+  local claudecode_win = nil
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    local buf_type = vim.bo[buf].buftype
+    local buf_filetype = vim.bo[buf].filetype
+    if buf_type == "terminal" and buf_filetype == "snacks_terminal" then
+      claudecode_win = win
+      break
+    end
+  end
+
+  if claudecode_win then
+    local width
+    if percentage == 1.0 then
+      width = vim.o.columns
+    else
+      width = math.floor(vim.o.columns * percentage)
+    end
+    vim.api.nvim_win_set_width(claudecode_win, width)
+    print(string.format("Claude terminal resized to %d%%", percentage * 100))
+  else
+    print("ClaudeCode terminal window not found")
+  end
+end
+
 return {
   {
     "ravitemer/mcphub.nvim",
@@ -13,6 +39,28 @@ return {
   {
     "coder/claudecode.nvim",
     dependencies = { "folke/snacks.nvim" },
+    config = function(_, opts)
+      require("claudecode").setup(opts)
+
+      vim.api.nvim_create_user_command("ClaudeResize", function(args)
+        local size = args.args:lower()
+        if size == "default" then
+          resize_claude_terminal(0.60)
+        elseif size == "full" then
+          resize_claude_terminal(1.0)
+        elseif size == "small" then
+          resize_claude_terminal(0.30)
+        else
+          print("Usage: :ClaudeResize [default|full|small]")
+        end
+      end, {
+        nargs = 1,
+        complete = function()
+          return { "default", "full", "small" }
+        end,
+        desc = "Resize ClaudeCode terminal window",
+      })
+    end,
     opts = {
       terminal_cmd = "claude",
       track_selection = true,
@@ -44,6 +92,28 @@ return {
       -- Diff management
       { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
       { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
+      -- Terminal resize
+      {
+        "<leader>a0",
+        function()
+          resize_claude_terminal(0.60)
+        end,
+        desc = "Claude terminal: default width (60%)",
+      },
+      {
+        "<leader>aF",
+        function()
+          resize_claude_terminal(1.0)
+        end,
+        desc = "Claude terminal: full width (100%)",
+      },
+      {
+        "<leader>a3",
+        function()
+          resize_claude_terminal(0.30)
+        end,
+        desc = "Claude terminal: small width (30%)",
+      },
     },
   },
   {
