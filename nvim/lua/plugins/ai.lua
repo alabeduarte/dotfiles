@@ -37,6 +37,32 @@ return {
     end,
   },
   {
+    "sourcegraph/amp.nvim",
+    branch = "main",
+    lazy = false,
+    config = function(_, opts)
+      require("amp").setup(opts)
+
+      vim.api.nvim_create_user_command("AmpSendMessage", function()
+        vim.ui.input({ prompt = "Message: " }, function(input)
+          if input then
+            require("amp").send_message(input)
+          end
+        end)
+      end, { desc = "Send a message to Amp" })
+
+      vim.api.nvim_create_user_command("AmpSendBuffer", function()
+        local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+        require("amp").send_message(table.concat(lines, "\n"))
+      end, { desc = "Send current buffer to Amp" })
+    end,
+    opts = { auto_start = true, log_level = "info" },
+    keys = {
+      { "<leader>am", "<cmd>AmpSendMessage<cr>", desc = "Send message to Amp" },
+      { "<leader>aB", "<cmd>AmpSendBuffer<cr>", desc = "Send buffer to Amp" },
+    },
+  },
+  {
     "coder/claudecode.nvim",
     dependencies = { "folke/snacks.nvim" },
     config = function(_, opts)
@@ -62,7 +88,8 @@ return {
       })
     end,
     opts = {
-      terminal_cmd = "claude",
+      --terminal_cmd = "gemini",
+      terminal_cmd = "bash -c 'rm -rf ~/.nvm/versions/node/*/lib/node_modules/@anthropic-ai/claude-code; npm i -g @anthropic-ai/claude-code; claude'",
       track_selection = true,
       terminal = {
         split_side = "right",
