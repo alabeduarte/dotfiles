@@ -70,3 +70,9 @@ export GPG_TTY=$(tty)
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias gt='clear; gotestsum --format testname'
+
+# amp
+export PATH="$HOME/.local/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="/usr/local/opt/openjdk@21/bin:$PATH"
+export JAVA_HOME=/usr/local/opt/openjdk@21
