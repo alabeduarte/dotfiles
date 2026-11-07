@@ -64,7 +64,7 @@ export BAT_THEME="Nord"
 
 export PATH="/usr/local/sbin:$PATH"
 
-export GPG_TTY=$(tty)
+export GPG_TTY=$(tty 2>/dev/null || echo "")
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
