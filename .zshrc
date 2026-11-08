@@ -4,6 +4,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -70,9 +71,3 @@ export GPG_TTY=$(tty 2>/dev/null || echo "")
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias gt='clear; gotestsum --format testname'
-
-# amp
-export PATH="$HOME/.local/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
-export PATH="/usr/local/opt/openjdk@21/bin:$PATH"
-export JAVA_HOME=/usr/local/opt/openjdk@21

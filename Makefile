@@ -1,9 +1,9 @@
 install: brew.install \
 	brew.bundle \
-	fzf.install \
 	vim.install \
 	tmux.install \
 	zshell.install \
+	fzf.install \
 	git_config.install \
 	gpg.install \
 	terminal.install
