@@ -1,0 +1,4 @@
+{
+  // Disable line-length rule (default is 80 columns)
+  "MD013": false
+}
